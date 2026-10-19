@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Cafe Dastaan | Register</title><link rel="stylesheet" href="registration.css"></head>
+<body>
+<header class="site-header"><a class="brand" href="home.html"><span class="brand-script">داستان</span><span class="brand-name">CAFE DASTAAN</span></a><button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button><nav class="navigation"><a href="home.html">Home</a><a href="media.html">Media & Info</a><a class="active" href="registration.html">Register</a></nav></header>
+<main class="register-page"><section class="register-aside"><p class="eyebrow">Join the guest list</p><h1>Your next<br><em>chapter starts here.</em></h1><p>Register your interest in café updates, seasonal menu news and upcoming gatherings.</p><img src="assets/coming-soon.png" alt="Cafe Dastaan coming soon mood board"><p class="fine-print">This is a front-end student project form. It does not send or store your information.</p></section>
+<section class="form-panel"><h2>Guest registration</h2><p class="form-lead">Fields marked with * are required.</p>
+<form id="register-form">
+<div class="form-grid">
+<label>Full name *<input type="text" name="fullName" required minlength="2" maxlength="60" placeholder="Your name"></label>
+<label>Email address *<input type="email" name="email" required placeholder="you@example.com"></label>
+<label>Password *<input type="password" name="password" required minlength="8" maxlength="30" placeholder="At least 8 characters"></label>
+<label>Date of birth<input type="date" name="birthDate" max="2026-10-17"></label>
+<label>Website or profile<input type="url" name="website" placeholder="https://example.com"></label>
+<label>Favourite accent colour<input type="color" name="accent" value="#8b6f50"></label>
+<label>Number of guests<input type="number" name="guests" min="1" max="12" value="2"></label>
+<label>Preferred visit time<input type="time" name="visitTime" min="16:00" max="23:00"></label>
+<label class="full-width">How often do you visit cafés? <span class="range-line"><input type="range" name="frequency" min="1" max="10" value="5"><output id="range-output">5</output></span></label>
+<label>Visit type<select name="visitType" required><option value="" selected disabled>Select one</option><option>Catch up with friends</option><option>Study or work</option><option>Family visit</option><option>Solo coffee</option></select></label>
+<label>Upload a reference image<input type="file" name="reference" accept="image/*"></label>
+<fieldset class="full-width"><legend>Preferred seating</legend><label class="choice"><input type="radio" name="seating" value="indoor" checked> Indoor</label><label class="choice"><input type="radio" name="seating" value="outdoor"> Outdoor</label><label class="choice"><input type="radio" name="seating" value="either"> Either is fine</label></fieldset>
+<fieldset class="full-width"><legend>Interests</legend><label class="choice"><input type="checkbox" name="interest" value="food"> Food updates</label><label class="choice"><input type="checkbox" name="interest" value="events"> Events</label><label class="choice"><input type="checkbox" name="interest" value="coffee"> Coffee</label></fieldset>
+<label class="full-width">Anything else? <textarea name="notes" rows="3" maxlength="400" placeholder="Tell us what you enjoy..."></textarea></label>
+<label class="full-width">Registration reference <input type="text" value="DASTAAN-GUEST" readonly></label>
+<label class="choice"><input type="checkbox" required> I agree to this demo form's terms *</label>
+</div><button class="button" type="submit">Register interest</button><button class="button button-muted" type="reset">Clear form</button><p id="register-message" role="status" aria-live="polite"></p><input type="text" value="Example only" disabled aria-label="Disabled demo field"></form>
+</section></main>
+<footer><a class="footer-brand" href="home.html">Cafe Dastaan</a><span>Dark academia, freshly baked, thoughtfully brewed.</span><span>Johar Town, Lahore · <a href="media.html">Get in touch</a></span></footer>
+<script>document.querySelectorAll(".nav-toggle").forEach(function(button){button.addEventListener("click",function(){var nav=document.querySelector(".navigation");var open=nav.classList.toggle("open");button.setAttribute("aria-expanded",String(open));});});</script></body></html>
